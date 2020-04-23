@@ -69,7 +69,7 @@ if [ "$TRAVIS_OS_NAME" = "osx" ]; then
                 install_helm
                 make test-local-volume/helm
         fi
-elif [ "$TEST_SUITE" = "linux-nfs-tmp" ]; then
+elif [ "$TEST_SUITE" = "linux-nfs" ]; then
 	# Install nfs, cfssl
 	sudo apt-get -qq update
 	sudo apt-get install -y nfs-common
@@ -135,6 +135,6 @@ elif [ "$TEST_SUITE" = "linux-everything-else" ]; then
 elif [ "$TEST_SUITE" = "linux-local-volume" ]; then
 #	make local-volume/provisioner
 #	make test-local-volume/provisioner
-#	install_helm
+	install_helm
 #	make test-local-volume/helm
 fi
