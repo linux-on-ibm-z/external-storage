@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM s390x/alpine:3.6
+FROM s390x/alpine
 RUN apk update --no-cache && apk add ca-certificates
 COPY nfs-client-provisioner /nfs-client-provisioner
 ENTRYPOINT ["/nfs-client-provisioner"]
