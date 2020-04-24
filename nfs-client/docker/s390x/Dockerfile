@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM s390x/debian:buster-slim
+FROM multiarch/qemu-user-static:x86_64-s390x-4.2.0-7
 RUN apk update --no-cache && apk add ca-certificates
 COPY nfs-client-provisioner /nfs-client-provisioner
 ENTRYPOINT ["/nfs-client-provisioner"]
