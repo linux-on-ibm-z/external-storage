@@ -120,21 +120,21 @@ elif [ "$TEST_SUITE" = "linux-nfs" ]; then
 	make nfs
 	make test-nfs-all
 elif [ "$TEST_SUITE" = "linux-everything-else" ]; then
-#	make aws/efs
-#	make test-aws/efs
-#	make ceph/cephfs
-#	make ceph/rbd
-#	make flex
-#	make gluster/block
-#	make gluster/glusterfs
-#	make iscsi/targetd
-#	make test-iscsi/targetd
+	make aws/efs
+	make test-aws/efs
+	make ceph/cephfs
+	make ceph/rbd
+	make flex
+	make gluster/block
+	make gluster/glusterfs
+	make iscsi/targetd
+	make test-iscsi/targetd
 	make nfs-client
-#	make snapshot
-#	make test-snapshot
+	make snapshot
+	make test-snapshot
 elif [ "$TEST_SUITE" = "linux-local-volume" ]; then
-#	make local-volume/provisioner
-#	make test-local-volume/provisioner
+	make local-volume/provisioner
+	make test-local-volume/provisioner
 	install_helm
-#	make test-local-volume/helm
+	make test-local-volume/helm
 fi
